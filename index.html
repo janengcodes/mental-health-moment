@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+     <!--# links to top of page-->
+    <header>
+    <a href="#" class="logo">Logo</a>
+    <ul>
+      <li><a href ="#" class="active">Home</a></li>
+      <li><a href ="journal.html">Journal</a></li>
+      <li><a href ="checklist.html">Checklist</a></li>
+      <li><a href ="#">Sign In</a></li>
+    </ul>
+   </header>
+   <section>
+     
+     <div class = "parent">
+      <img class = "image1" src="Notebook_back.png" id="mountains_behind">
+      <h2 id="text">mental health moment</h2>
+       <div> 
+      <a href="#sec" id="btn">explore</a>
+    </div>  
+      <img class = "image2" src="Notebook_front.png" id="mountains_front">
+     </div>
+
+   </section>
+   <div class="sec" id="sec">
+     <h2>Mental Health Moment</h2> 
+     <p> Descriptive paragraph </p>
+   </div>
+    
+    <script>
+      let text = document.getElementById("text");
+      let btn = document.getElementById("btn");
+
+      window.addEventListener('scroll', function(){
+        let value = window.scrollY;
+        text.style.marginLeft = value * 5 + 'px';
+        btn.style.marginLeft = value * 5 + 'px';
+        if (text.style.marginLeft == "100px") {
+          text.style.marginLeft = value * 0 + 'px';
+        }
+      })
+    
+    </script>
+
+  </body>
+</html>

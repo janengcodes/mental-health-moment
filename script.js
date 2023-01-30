@@ -1,0 +1,10 @@
+function _(id) {
+  return document.getElementById(id)
+}
+
+function getRs() {
+  let txt = document.getElementById("txt").value
+  const d = new Date()
+  
+  _('rs').innerHTML += `<div class = "card"><p>${txt}</p> <small>${d.toLocaleTimeString(), d.toLocaleDateString()}</small></div>`
+}
